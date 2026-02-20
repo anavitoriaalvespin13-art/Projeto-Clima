@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-image: url(/img/Fubdo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+.caixar-principal{
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.caixa-pesquisa {
+    background: rgb(18, 18, 18);
+    width: 500px;
+    min-width: 300px;
+    padding: 10px;
+    border-radius: 15px;
+    flex-direction: column; /* 🔥 empilha conteúdo */
+    justify-content: space-between;
+    backdrop-filter: blur(2px); /* 😎 efeito glass */
+    float: left;
+    margin-top: 30px;
+}
+
+
+#cidade{
+    font-size: 20px;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    width: 80%;
+    font-size: 20px;
+    outline: none;
+    color: rgb(7, 6, 6);
+    border-radius: 10px;
+    border: none;
+}
+
+button img{
+   height: 15px;
+
+}
+button{
+    border-radius: 50%;
+    padding: 8px;
+    border: none;
+    min-width: 35px;
+    margin-left: 8%;
+}
+
+.resposta{
+    background: rgba(0, 0, 0, 0.747);
+    width: 800px;
+    margin-top: 10px;
+    border-radius:10px ;
+    backdrop-filter: blur(2px);
+    color: aliceblue;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    animation: suaver 1s ease;
+}
+
+@keyframes suaver {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+        height: 0px;
+        overflow:hidden;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+.resposta h2{
+    font-size: 2rem;
+}
+
+.nome-clima{
+    font-size: 1.5rem;
+}
+
+.temp{
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+
+.detalhes{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.1rem;
+    margin-top: 35px;
+ 
+}
+
+
+.caixa2{
+    background: rgba(0, 0, 0, 0.747);
+    height: 200px;
+    width: 800px;
+    margin-top: 10px;
+    border-radius:10px ;
+    backdrop-filter: blur(2px);
+    color: aliceblue;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+body{
+    display: flex;
+    align-items: center;
+}
+
+
+h1{
+    font-size: 2rem;
+}
+
+.caixar-principal{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.caixa-pesquisa{
+    width: 100%;
+ 
+}
+
+#cidade{
+   width:70%;
+   font-size: 12px;
+}
+
+
+button{
+    float:right;
+}
+
+.resposta{
+    width: 100%;
+}
+
+.caixa2{
+     width: 100%;
+     background: red;
+
+}
+
+}
