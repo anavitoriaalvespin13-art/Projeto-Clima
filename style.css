@@ -8,7 +8,7 @@ body{
     display: flex;
     justify-content: center;
     padding: 10px;
-    background-image: url(/img/Fubdo.png);
+    background-image: url("./img/Fubdo.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
