@@ -20,24 +20,23 @@ h1{
 }
 
 .caixar-principal{
+    align-items: center;
     padding: 20px;
-    text-align: center;
     display: flex;
     flex-direction: column;
 }
 
 
 .caixa-pesquisa {
-    background: rgb(18, 18, 18);
+    background: rgba(4, 4, 4, 0.696);
     width: 500px;
     min-width: 300px;
     padding: 10px;
     border-radius: 15px;
     flex-direction: column; /* 🔥 empilha conteúdo */
     justify-content: space-between;
-    backdrop-filter: blur(2px); /* 😎 efeito glass */
     float: left;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 
@@ -66,16 +65,17 @@ button{
 }
 
 .resposta{
-    background: rgba(0, 0, 0, 0.747);
-    width: 800px;
+     background: rgba(0, 0, 0, 0.76);
+    width: 900px;
     margin-top: 10px;
     border-radius:10px ;
-    backdrop-filter: blur(2px);
     color: aliceblue;
     text-align: center;
     align-items: center;
     padding: 20px;
-    animation: suaver 1s ease;
+    animation: suaver 0.5s ease;
+    box-shadow: 0 1px 10px rgb(0, 0, 0);
+    border: 1px solid #ffffff43;
 }
 
 @keyframes suaver {
@@ -84,46 +84,98 @@ button{
         transform: translateY(-10px);
         height: 0px;
         overflow:hidden;
+       
     }
     to{
         opacity: 1;
         transform: translateX(0px);
+        
     }
 }
 
 
 .resposta h2{
-    font-size: 2rem;
+    font-size: 2.5rem;
+    border-bottom: 1px solid rgb(139, 139, 139);
 }
 
-.nome-clima{
-    font-size: 1.5rem;
-}
 
 .temp{
+    margin-top: 40px;
     font-size: 1.5rem;
-    margin-top: 10px;
+    font-weight: bold;
 }
 
 
-.detalhes{
+.detalhes{ 
     display: flex;
     justify-content: space-around;
     font-size: 1.1rem;
     margin-top: 35px;
- 
+
 }
 
+.fundo_detalhes{
+    display: flex;
+    gap: 10px;
+}
+
+
+.icone{
+    height: 120px;
+}
+
+
+.clima{  /*Como ta o clima*/
+    font-size: 1.5rem;
+}
+
+
+/*--------  Caixa dos 5 dias ---------*/
 
 .caixa2{
-    background: rgba(0, 0, 0, 0.747);
-    height: 200px;
-    width: 800px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.76);
+    width: 900px;
     margin-top: 10px;
     border-radius:10px ;
-    backdrop-filter: blur(2px);
+    padding: 20px;
     color: aliceblue;
+    animation: suaver 0.5s ease;
+    box-shadow: 0 1px 10px rgb(0, 0, 0);
+    border: 1px solid #ffffff43;
 }
+
+.titulo {
+    border-bottom: 1px solid rgb(56, 56, 56);
+    font-size: 1.5rem;
+}
+
+.listaDias{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.dia{
+    background: rgba(59, 59, 59, 0.374);
+    border: 1px solid #ffffff25;
+    padding: 10px;
+    width: 170px;
+    min-width: 40px;
+    border-radius: 5px;
+}
+
+
+.nome-clima{
+    font-size: 1rem;
+}
+
+
+
+
+
 
 
 
@@ -137,14 +189,15 @@ body{
 
 
 h1{
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-top: 10px;
 }
 
 .caixar-principal{
     display: flex;
     justify-content:center;
     flex-direction: column;
-    width: 100%;
+    padding: 0;
 }
 
 
@@ -167,10 +220,65 @@ button{
     width: 100%;
 }
 
+.fundo_detalhes{
+    background: #5857578c;
+    border: 1px solid #c5c5c525;
+    border-radius: 10px;
+    width: 100px;
+    padding: 10px;
+    flex-direction: column;
+    padding: 5px;
+   
+
+    span{
+        color: transparent;
+    }
+}
+
+
+/*----------CAIXA DE 5 DIAS------------*/
+
 .caixa2{
      width: 100%;
-     background: red;
+}
 
+.dia{ /* div com informaçaoes fundo*/
+    width: 100%;
+    font-size: 12px; 
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 5px;
+}
+
+.nomeDia{
+   width: 70px;
+   text-align: start;
+}
+
+.nome-clima{
+    font-size: 2100px;
+
+}
+.imags{
+    height: 50px;
+}
+
+.listaDias{ /*Informações*/
+   flex-direction: column;
+}
+
+.imgTmp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:row-reverse;
+}
+
+.nome-clima{
+    align-items: center;
+    font-size: 12px;
+    width: 100px;
 }
 
 }
